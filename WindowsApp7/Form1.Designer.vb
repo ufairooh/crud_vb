@@ -23,12 +23,11 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.PanelFood = New System.Windows.Forms.Panel()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -46,19 +45,14 @@ Partial Class Form1
         Me.LabelNama = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.PanelFood.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(559, 19)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 28
-        Me.TextBox3.Visible = False
         '
         'TextBox5
         '
@@ -77,8 +71,11 @@ Partial Class Form1
         Me.PanelFood.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelFood.Controls.Add(Me.Button5)
+        Me.PanelFood.Controls.Add(Me.ComboBox1)
+        Me.PanelFood.Controls.Add(Me.Label7)
+        Me.PanelFood.Controls.Add(Me.TextBox6)
         Me.PanelFood.Controls.Add(Me.Button4)
-        Me.PanelFood.Controls.Add(Me.TextBox4)
         Me.PanelFood.Controls.Add(Me.Label5)
         Me.PanelFood.Controls.Add(Me.Label4)
         Me.PanelFood.Controls.Add(Me.Label3)
@@ -93,24 +90,24 @@ Partial Class Form1
         Me.PanelFood.Controls.Add(Me.DataGridView1)
         Me.PanelFood.Location = New System.Drawing.Point(229, 45)
         Me.PanelFood.Name = "PanelFood"
-        Me.PanelFood.Size = New System.Drawing.Size(441, 344)
+        Me.PanelFood.Size = New System.Drawing.Size(492, 344)
         Me.PanelFood.TabIndex = 26
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(23, 168)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox6.TabIndex = 30
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(320, 43)
+        Me.Button4.Location = New System.Drawing.Point(330, 43)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(100, 23)
         Me.Button4.TabIndex = 23
         Me.Button4.Text = "Open File"
         Me.Button4.UseVisualStyleBackColor = True
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(320, 74)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 22
         '
         'Label5
         '
@@ -186,7 +183,7 @@ Partial Class Form1
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(320, 16)
+        Me.TextBox2.Location = New System.Drawing.Point(330, 17)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
         Me.TextBox2.TabIndex = 10
@@ -217,7 +214,7 @@ Partial Class Form1
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder
         Me.DataGridView1.Location = New System.Drawing.Point(23, 194)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(397, 137)
+        Me.DataGridView1.Size = New System.Drawing.Size(448, 137)
         Me.DataGridView1.TabIndex = 7
         '
         'Panel1
@@ -276,13 +273,39 @@ Partial Class Form1
         Me.Label6.TabIndex = 29
         Me.Label6.Text = "HIdangan"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(436, 48)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(39, 13)
+        Me.Label7.TabIndex = 31
+        Me.Label7.Text = "Label7"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Burger", "Salad", "Breakfast", "Minuman", "Dessert"})
+        Me.ComboBox1.Location = New System.Drawing.Point(330, 78)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 32
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(129, 165)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 33
+        Me.Button5.Text = "Search"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(676, 431)
+        Me.ClientSize = New System.Drawing.Size(727, 431)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.PanelFood)
         Me.Controls.Add(Me.Panel1)
@@ -297,13 +320,10 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents PanelFood As Panel
     Friend WithEvents Button4 As Button
-    Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
@@ -321,4 +341,8 @@ Partial Class Form1
     Friend WithEvents LabelNama As Label
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Button5 As Button
 End Class

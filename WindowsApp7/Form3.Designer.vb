@@ -30,6 +30,8 @@ Partial Class Form3
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PanelFood = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,7 +104,9 @@ Partial Class Form3
         Me.PanelFood.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelFood.Controls.Add(Me.Button5)
         Me.PanelFood.Controls.Add(Me.DataGridView1)
+        Me.PanelFood.Controls.Add(Me.TextBox6)
         Me.PanelFood.Location = New System.Drawing.Point(231, 26)
         Me.PanelFood.Name = "PanelFood"
         Me.PanelFood.Size = New System.Drawing.Size(441, 344)
@@ -116,6 +120,22 @@ Partial Class Form3
         Me.Label6.Size = New System.Drawing.Size(33, 13)
         Me.Label6.TabIndex = 33
         Me.Label6.Text = "Order"
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(130, 63)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 37
+        Me.Button5.Text = "Search"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(24, 66)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox6.TabIndex = 36
         '
         'Form3
         '
@@ -131,6 +151,7 @@ Partial Class Form3
         Me.Panel1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelFood.ResumeLayout(False)
+        Me.PanelFood.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -143,4 +164,6 @@ Partial Class Form3
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents PanelFood As Panel
     Friend WithEvents Label6 As Label
+    Friend WithEvents Button5 As Button
+    Friend WithEvents TextBox6 As TextBox
 End Class
